@@ -3,13 +3,10 @@ pipeline{
     tools{
         maven 'maven_3_9_6'
     }
-    environment{
-        DOCKERHUB_CREDENTIALS = credentials('dockerhubcredentials')
-    }
     stages{
         stage('Build Maven'){
             steps{
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/BoubacarSIDDY/jenkins-integration']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/BoubacarSIDDY/jenkins-integration.git']])
                 bat 'mvn clean install'
             }
         }
