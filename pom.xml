@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.groupeisi</groupId>
 	<artifactId>jenkins-integration</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>jenkins-integration</name>
 	<description>cicd with jenkins</description>
 	<properties>
@@ -36,6 +36,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>jenkins-integration</finalName>
 	</build>
 
 </project>
