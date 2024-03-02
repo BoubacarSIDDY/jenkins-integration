@@ -20,8 +20,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub_credentials', passwordVariable: 'DOCKER_HUB_PASSWORD', usernameVariable: 'DOCKER_HUB_USERNAME')]) {
                     bat "docker login -u $DOCKER_HUB_USERNAME -p $DOCKER_HUB_PASSWORD"
-                    bat "docker tag jenkins-integration:1.0 boubacarsiddy/jenkins-integration"
-                    bat "docker push boubacarsiddy/jenkins-integration:1.0"
+                    bat "docker push boubacarsiddy/jenkins-integration"
                }
             }
        }
